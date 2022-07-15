@@ -1,6 +1,6 @@
 import re
-f1 = open('Email_Extract_Unmodified.txt', 'r')
-f2 = open('Email_Extract_Modified.txt','w')
+f1 = open('Email_Extract_Unmodified.txt', 'r', encoding='utf8')
+f2 = open('Email_Extract_Modified.txt','w', encoding='utf8')
 content = f1.read()
 res_content = re.sub(r'\r',"",content,flags=re.M)
 res_content = re.sub(r'Do you agree to the group rules from the admin\?\n.*\n(.*)',r'zxc\1',res_content,flags=re.M)

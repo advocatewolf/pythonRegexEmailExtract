@@ -14,6 +14,7 @@ res_content = re.sub(r'^(?!zxc).*\n',"",res_content,flags=re.M)
 res_content = re.sub(r'\n\n',r'\n',res_content,flags=re.M)
 res_content = re.sub(r'^zxc',"",res_content,flags=re.M)
 res_content = re.sub(r'\n^(.*)@(.*)\n',r',\1@\2\n',res_content,flags=re.M)
+res_content = re.sub(r'^I agree',r'',res_content,flags=re.M)
 
 print(str(datetime.date.today()))
 i = 0
